@@ -1,18 +1,23 @@
+import java.util.Arrays;
+
 public class Homework10 {
 
     public static void main(String[] args) {
-        int a []  = {15, 45, 70, 14, 24, 55, 85, 13};
-        for (int i = 0; i < a.length; i++) {
-           int y = i;
-            for (int j = i; j < a.length; j++) {
-                if (a[y] < a[j])
-                    y = j;
+        int [] array = new int [] {15, 45, 70, 14, 24, 55, 85, 13};
+        boolean Sort = false;
+        int change;
+        while (!Sort) {
+            Sort = true;
+            for (int i = 1; i < array.length; i++) {
+                if (array[i] < array[i - 1]) {
+                    change = array[i];
+                    array[i] = array[i - 1];
+                    array[i - 1] = change;
+                    Sort = false;
+                }
             }
-            int t = a[y];
-            a[y] = a[i];
-            a[i] = t;
-            System.out.println(a[i]);
         }
+        System.out.println(Arrays.toString(array));
     }
 }
 
