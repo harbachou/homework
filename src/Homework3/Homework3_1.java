@@ -3,6 +3,7 @@ package Homework3;
 Начать их использовать в вашем коде.
  */
 import java.util.Scanner;
+import java.util.Arrays;
 public class Homework3_1 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -17,12 +18,13 @@ public class Homework3_1 {
         for (int value : mass) {
             System.out.print(+value + " ; ");
         }
-        selectionSort(mass);
+        insertionSort(mass);
         System.out.println("\n Отсортированный массив");
         for (int value : mass) {
             System.out.print(+value + " ; ");
         }
     }
+
     //Сортировка выбором
     public static int[] selectionSort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
@@ -42,19 +44,54 @@ public class Homework3_1 {
         }
         return arr;
     }
+
     //Сортировка пузырьком
-            public static int[] bubbleSort(int[] arr){
-                for (int i = arr.length - 1; i > 0; i--) {
-                    for (int j = 0; j < i; j++) {
-                        if (arr[j] > arr[j + 1]) {
-                            int tmp = arr[j];
-                            arr[j] = arr[j + 1];
-                            arr[j + 1] = tmp;
-                        }
-                    }
+    public static int[] bubbleSort(int[] arr) {
+        for (int i = arr.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
                 }
-                return arr;
             }
         }
+        return arr;
+    }
+
+    //Сортировка разделением
+    public static int[] separationSort(int[] arr) {
+        int[] num1 = new int[arr.length / 2];
+        int[] num2 = new int[arr.length / 2];
+        System.arraycopy(arr, 0, num1, 0, arr.length / 2);
+        System.arraycopy(arr, arr.length / 2, num2, 0, arr.length / 2);
+        Arrays.sort(num1);
+        Arrays.sort(num2);
+        System.out.println(Arrays.toString(num1));
+        System.out.println(Arrays.toString(num2));
+        {
+            return arr;
+        }
+    }
+
+    //Сортировка вставкой
+    public static int[] insertionSort(int[] arr) {
+        for (int left = 0; left < arr.length; left++) {
+            int value = arr[left];
+            int i = left - 1;
+            for (; i >= 0; i--) {
+                if (value < arr[i]) {
+                    arr[i + 1] = arr[i];
+                } else {
+                    break;
+                }
+            }
+            arr[i + 1] = value;
+        }
+        System.out.println(Arrays.toString(arr));
+        return arr;
+    }
+}
+
 
 
