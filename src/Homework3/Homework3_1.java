@@ -10,7 +10,7 @@ public class Homework3_1 {
         int size = in.nextInt();
         int[] mass = new int[size];
         for (int i = 0; i < mass.length; i++) {
-            System.out.println("Введите значение " + (i + i) + " массива");
+            System.out.println("Введите значение " + (i + 1) + " массива");
             mass[i] = in.nextInt();
         }
         System.out.println("\n Введенный массив");
@@ -42,7 +42,7 @@ public class Homework3_1 {
         }
         return arr;
     }
-            //Сортировка пузырьком
+    //Сортировка пузырьком
             public static int[] bubbleSort(int[] arr){
                 for (int i = arr.length - 1; i > 0; i--) {
                     for (int j = 0; j < i; j++) {
@@ -56,4 +56,5 @@ public class Homework3_1 {
                 return arr;
             }
         }
+
 
