@@ -59,7 +59,7 @@ public class Homework3_1 {
         return arr;
     }
 
-    //Сортировка разделением
+    //Сортировка разделением (???)
     public static int[] separationSort(int[] arr) {
         int[] num1 = new int[arr.length / 2];
         int[] num2 = new int[arr.length / 2];
