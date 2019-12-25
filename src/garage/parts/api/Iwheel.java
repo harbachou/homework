@@ -1,4 +1,4 @@
 package garage.parts.api;
 
-public interface Iwheel {
+public interface IWheel {
 }

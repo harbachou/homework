@@ -1,4 +1,5 @@
 package garage.cars.api;
 
-public interface ACars {
+public abstract class ACars implements ICar{
+
 }
