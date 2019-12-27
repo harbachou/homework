@@ -1,6 +1,6 @@
 package Homework4;
 
-public enum Country {
+public enum Country implements Comparable<Country>{
     Belarus(207595, 9500000),
     Poland(312679, 37980000),
     Spain(505590, 46660000),
@@ -11,11 +11,31 @@ public enum Country {
     Norway(385203, 5328000),
     Germany(357386, 82790000),
     Japan(377973, 126800000);
-    public final int Area;
-    public final int Population;
+    private int Area;
+    private int Population;
 
     Country(int Area, int Population) {
         this.Area = Area;
         this.Population = Population;
     }
-}
+    public int getArea(){
+        return Area;
+    }
+    public int getPopulation(){
+        return Population;
+    }
+
+    public int compare(Country country){
+        if (this.Area == country.getArea()) {
+            return 0;
+        }
+            else if(this.Area > country.getArea()){
+                return 1;
+            }
+            else {
+                return -1;
+            }
+        }
+
+    }
+
