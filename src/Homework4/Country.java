@@ -12,7 +12,7 @@ public enum Country {
     Germany(357386, 82790000),
     Japan(377973, 126800000);
     public final int Area;
-    private final int Population;
+    public final int Population;
 
     Country(int Area, int Population) {
         this.Area = Area;
