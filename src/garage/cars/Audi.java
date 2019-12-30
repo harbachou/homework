@@ -1,4 +1,6 @@
 package garage.cars;
 
-public class Audi {
+import garage.cars.api.ACars;
+
+public class Audi extends ACars {
 }

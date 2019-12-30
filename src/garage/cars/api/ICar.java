@@ -1,8 +1,13 @@
 package garage.cars.api;
 
+import garage.parts.api.IKey;
+
 public interface ICar {
+    String getModel();
+    String getBrand();
+
     void drive();
-    void open();
+    boolean open(IKey key);
     void close();
     void start();
     void stop();

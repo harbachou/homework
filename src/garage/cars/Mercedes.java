@@ -1,52 +1,26 @@
 package garage.cars;
 
-import garage.cars.api.ICar;
+import garage.cars.api.ACars;
+import garage.parts.engine.MercedesEngine;
+import garage.parts.engine.NoNameEngine;
+import garage.parts.engine.api.IEngine;
 
-public class Mercedes implements ICar {
+public class Mercedes extends ACars{
+    private String model;
+    private IEngine engine;
 
-
-    @Override
-    public void drive() {
-
+    public Mercedes(String model, IEngine engine){
+        this.model = model;
+        this.engine = engine;
     }
 
     @Override
-    public void open() {
-
+    public String getModel() {
+        return model;
     }
 
     @Override
-    public void close() {
-
-    }
-
-    @Override
-    public void start() {
-
-    }
-
-    @Override
-    public void stop() {
-
-    }
-
-    @Override
-    public void fuel() {
-
-    }
-
-    @Override
-    public void changeWheel() {
-
-    }
-
-    @Override
-    public void driverSeat() {
-
-    }
-
-    @Override
-    public void passengerSeat() {
-
+    public String getBrand() {
+        return "Mercedes";
     }
 }
