@@ -2,21 +2,26 @@ package Calc;
 
 public class Calc {
 
-    public double sum(double a, double b) {
+    public double calculate (double a, double b, String operator) {
 
-        return a + b;
-    }
-    public double subtraction(double a, double b) {
-
-        return a - b;
-    }
-    public double multiplication(double a, double b) {
-
-        return a * b;
-    }
-    public double division(double a, double b) {
-
-        return a / b;
+        double result = 0;
+        switch (operator){
+            case "+":
+                result = a+b;
+                break;
+            case "-":
+                result = a-b;
+                break;
+            case "*":
+                result = a*b;
+                break;
+            case "/":
+                result = a/b;
+                break;
+            default:
+                System.out.println("Неверный оператор");
+        }
+        return result;
     }
 }
 
