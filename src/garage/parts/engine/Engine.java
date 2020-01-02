@@ -4,15 +4,15 @@ import garage.parts.engine.api.FuelType;
 import garage.parts.engine.api.IChangebleFuelType;
 import garage.parts.engine.api.IEngine;
 
-public class MercedesEngine implements IChangebleFuelType {
+public class Engine implements IChangebleFuelType {
     private final String id;
     private final int capacity;
     private FuelType fuelType;
     private boolean running = false;
 
-    public MercedesEngine(int capacity,
-                          FuelType fuelType,
-                          String id){
+    public Engine(int capacity,
+                  FuelType fuelType,
+                  String id){
 
         this.capacity = capacity;
         this.fuelType = fuelType;
