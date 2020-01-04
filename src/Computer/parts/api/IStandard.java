@@ -1,4 +1,4 @@
-package Comp.parts.api;
+package Computer.parts.api;
 
 public interface IStandard {
 }

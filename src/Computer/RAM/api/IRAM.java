@@ -1,4 +1,4 @@
-package Comp.RAM.api;
+package Computer.RAM.api;
 
 public interface IRAM {
 }

@@ -1,4 +1,4 @@
-package Comp.CPU.api;
+package Computer.CPU.api;
 
 public interface ICPU {
 

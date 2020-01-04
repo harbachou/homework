@@ -1,4 +1,4 @@
-package Comp.HDD.api;
+package Computer.HDD.api;
 
 public interface IHDD {
 }
