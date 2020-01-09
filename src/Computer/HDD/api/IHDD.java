@@ -1,4 +1,6 @@
 package Computer.HDD.api;
 
-public interface IHDD {
+import Computer.parts.api.IParts;
+
+public interface IHDD extends IParts {
 }

@@ -1,4 +1,6 @@
 package Computer.RAM.api;
 
-public interface IRAM {
-}
+import Computer.parts.api.IParts;
+
+public interface IRAM extends IParts {
+    }
