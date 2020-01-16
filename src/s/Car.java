@@ -3,7 +3,7 @@ package s;
 public class Car {
     int price;
 
-    public Car(){
+    public Car() {
         this.price = 10;
     }
 
@@ -11,8 +11,8 @@ public class Car {
         this.price = price;
     }
 
-    private Car(boolean flagi){
-        if(flagi){
+    private Car(boolean flagi) {
+        if (flagi) {
             this.price = 99999;
         } else {
             this.price = 0;
@@ -27,7 +27,7 @@ public class Car {
         this.price = price;
     }
 
-    public static Car newInstance(){
+    public static Car newInstance() {
         return new Car(false);
     }
 }
