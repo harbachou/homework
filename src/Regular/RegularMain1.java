@@ -1,7 +1,7 @@
 package Regular;
 
 
-public class Regular {
+public class RegularMain1 {
     public static void main(String[] args) {
         System.out.println("20934".matches("-?[0-9]+"));
 
