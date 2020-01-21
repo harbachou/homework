@@ -8,6 +8,13 @@ public class Passport {
     private Date effectiveAt;
     private String fio;
 
+    public Passport(String s, Date date, String s1) {
+    }
+
+    public Passport() {
+
+    }
+
     public String getId() {
         return id;
     }
