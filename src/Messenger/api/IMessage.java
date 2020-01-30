@@ -1,6 +1,5 @@
 package Messenger.api;
 
-import javax.xml.crypto.Data;
 import java.util.Date;
 
 public interface IMessage <T> {

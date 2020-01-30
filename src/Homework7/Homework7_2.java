@@ -1,7 +1,5 @@
 package Homework7;
-/* Найти в книге "Война и мир" при помощи обычного поиска по строке и при помощи регуляных выражений.
-3. Реализацию поиска сделать при помощи классов и интерфейсов. Вывести информацию как часто встречаются строки
-"война", "и" (как союз), "мир". Дать возможность через аргументы программы выбрать какое слово будем искать в тексте
+/* Определяем колличество слов в файле "Война и мир"
  */
 
 import java.io.File;
@@ -12,7 +10,7 @@ import java.lang.String;
 
 public class Homework7_2 {
     public static void main(String[] args) {
-        File file = new File("C:\\Users\\user\\Desktop\\Война и мир.txt");
+        File file = new File("C:\\Users\\user\\IdeaProjects\\HomeWork2\\src\\Homework7\\Война и мир.txt");
         try (Scanner sc = new Scanner(new FileInputStream(file))) {
             int count = 0;
             while (sc.hasNext()) {

@@ -10,8 +10,9 @@ public class Registration {
         if (users.containsKey(name)) {
             throw new IllegalArgumentException("Пользователь с таким именем существует");
         }
-
+        return null;
     }
+}
 
 
 
