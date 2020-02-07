@@ -1,26 +1,50 @@
 package Messenger;
 
 import Messenger.api.IChat;
-import Messenger.api.IMessage;
-import sun.plugin2.message.Message;
+import Messenger.api.ISaver;
 
+import java.io.Serializable;
 import java.util.List;
-import java.util.Set;
 
-public class Chat implements IChat {
+public class Chat implements IChat, Serializable {
+
+//    @Override
+//    public long countMessages() {
+//        return 0;
+//    }
+//
+//    @Override
+//    public long countUsers() {
+//        return 0;
+//    }
+//
+//    @Override
+//    public void addMessage(IMessage message) {
+//
+//    }
+//
+//    @Override
+//    public void addMessage(IMessage[] message) {
+//
+//    }
+//
+//    @Override
+//    public void addMessage(List<IMessage> message) {
+//
+//    }
 
     @Override
-    public void addMessage(IMessage message) {
+    public void addMessage(Message message) {
 
     }
 
     @Override
-    public Set<User> getUserChat() {
+    public List<Message> getMessages() {
         return null;
     }
 
     @Override
-    public List<Message> getMessageChat() {
-        return null;
+    public void save(ISaver saver) {
+
     }
 }

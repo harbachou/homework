@@ -1,16 +1,34 @@
 package Messenger;
 
-import sun.security.x509.UniqueIdentity;
+import Messenger.api.IUser;
 
-public class User {
-    private long id;
+import java.io.Serializable;
 
-    public User(long id, String name, String password) {
+public class User implements IUser, Serializable {
+
+    public int id;
+    private String name;
+    private String password;
+    Chat chat = new Chat();
+
+    public User(int id, String name, String password) {
         this.id = id;
         this.name = name;
         this.password = password;
     }
 
-    private String name;
-    private String password;
+    @Override
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
 }
