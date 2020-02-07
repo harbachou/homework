@@ -3,7 +3,7 @@ package garage.cars.api;
 import garage.parts.api.IKey;
 
 public interface ICar {
-    String getModel();
+    static String getModel();
     String getBrand();
 
     void drive();
