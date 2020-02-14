@@ -6,7 +6,7 @@ public class Generate {
 
     public static String name() {
         Random random = new Random();
-        String letters = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+        String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuilder strBuilder = new StringBuilder();
         for (int i=0; i<5; i++ ){
             strBuilder.append(letters.charAt(random.nextInt(letters.length())));
@@ -16,7 +16,7 @@ public class Generate {
 
     public static String surname() {
         Random random = new Random();
-        String letters = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+        String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuilder strBuilder = new StringBuilder();
         for (int i=0; i<5; i++ ){
             strBuilder.append(letters.charAt(random.nextInt(letters.length())));
