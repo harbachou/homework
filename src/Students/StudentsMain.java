@@ -13,15 +13,15 @@ public class StudentsMain {
         for (int i=0; i<100; i++) {
             studentsList.add(new Students());
         }
-        File file = new File ("Список студентов.txt");
+        File file = new File ("StudentsList.txt");
         if (file.exists()) {
-            List<Students> list = Loader.load("Список студентов.txt");
+            List<Students> list = Loader.load("StudentsList.txt");
             select(list);
         } else {
             List<Students> list = null;
             list = Stream.generate(()-> new Students(Generate.name(), Generate.surname())).limit(100)
                     .collect(toList());
-            Saver.Save("Список студентов.txt", list);
+            Saver.Save("StudentsList.txt", list);
             select(list);
         }
     }
